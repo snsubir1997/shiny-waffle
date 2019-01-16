@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">BaseAdapterTutorial</string>
+
+    <string-array name="names">
+        <item>Terry	Fitzgerald</item>
+        <item>Rufus	Klein</item>
+        <item>Edith	Haynes</item>
+        <item>Belinda Francis</item>
+        <item>Everett Frank</item>
+        <item>Keith	Scott</item>
+        <item>Miranda Parks</item>
+        <item>Christie Christensen</item>
+        <item>Santiago Ramsey</item>
+        <item>Sonja	Wagner</item>
+    </string-array>
+
+    <string-array name="rollNos">
+        <item>1131401</item>
+        <item>1131402</item>
+        <item>1131403</item>
+        <item>1131404</item>
+        <item>1131405</item>
+        <item>1131406</item>
+        <item>1131407</item>
+        <item>1131408</item>
+        <item>1131409</item>
+        <item>1131410</item>
+    </string-array>
+
+    <string-array name="gpa">
+        <item>8.65</item>
+        <item>9.46</item>
+        <item>7.70</item>
+        <item>5.78</item>
+        <item>6.45</item>
+        <item>7.34</item>
+        <item>9.86</item>
+        <item>8.52</item>
+        <item>4.84</item>
+        <item>9.04</item>
+    </string-array>
+</resources>
