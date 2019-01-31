@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ScrollView</string>
+
+    <string-array name="names">
+        <item>Terry	Fitzgerald</item>
+        <item>Rufus	Klein</item>
+        <item>Edith	Haynes</item>
+    </string-array>
+
+</resources>
