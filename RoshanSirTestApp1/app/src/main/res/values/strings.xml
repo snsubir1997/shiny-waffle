@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">RoshanSirTestApp1</string>
+    <string name="name_of_student">Enter Name Of Student</string>
+    <string name="reg_id">Enter Registration ID of Student</string>
+    <string name="save_button">SAVE</string>
+    <string name="clear_button">CLEAR</string>
 </resources>
