@@ -4,7 +4,14 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.Toolbar;
+import android.util.SparseBooleanArray;
+import android.view.ActionMode;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -12,6 +19,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 
 import com.subir.roshansirtestapp1.Adapter.MyAdapter;
 import com.subir.roshansirtestapp1.Model.ItemList;
@@ -23,6 +31,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText nameText,regIdText;
     private MyAdapter myAdapter;
     private ArrayList<ItemList> itemListArrayList;
+    private Toolbar toolbar;
+
 
     private String nameArr[] = {
             "Subir",
@@ -51,6 +61,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("CodesFor Languages");
+
         nameText = findViewById(R.id.nameEditText);
         regIdText = findViewById(R.id.regNoEditText);
 
@@ -62,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         clearBtn.setOnClickListener(this);
 
         itemListArrayList = new ArrayList<>();
-        myAdapter = new MyAdapter(this,itemListArrayList);
+        myAdapter = new MyAdapter(this, itemListArrayList);
 
         listView.setAdapter(myAdapter);
 
@@ -70,12 +84,62 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                ItemList item = (ItemList)parent.getItemAtPosition(position);
+                ItemList item = (ItemList) parent.getItemAtPosition(position);
                 String name = item.getName();
 
-                Intent i = new Intent(MainActivity.this,NextActivity.class);
+                Intent i = new Intent(MainActivity.this, NextActivity.class);
                 i.putExtra("NAME_ID", name);
                 startActivity(i);
+            }
+        });
+
+
+        listView.setChoiceMode(AbsListView.CHOICE_MODE_MULTIPLE_MODAL);
+
+        listView.setMultiChoiceModeListener(new AbsListView.MultiChoiceModeListener() {
+            @Override
+            public void onItemCheckedStateChanged(ActionMode mode, int position,
+                                                  long id, boolean checked) {
+                mode.setTitle("" + listView.getCheckedItemCount() + " items selected");
+            }
+
+            @Override
+            public boolean onCreateActionMode(ActionMode mode, Menu menu) {
+                MenuInflater menuInflater = mode.getMenuInflater();
+                menuInflater.inflate(R.menu.context_action_menu, menu);
+                return true;
+            }
+
+            @Override
+            public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
+                return false;
+            }
+
+            @Override
+            public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
+                switch (item.getItemId()) {
+
+                    case R.id.menu_delete:
+
+                        //action on clicking contextual action bar menu item
+
+                        SparseBooleanArray checkedItems = listView.getCheckedItemPositions();
+                        for (int i = 0; i < checkedItems.size(); i++) {
+
+                            if (checkedItems.valueAt(i) == true) {
+                                itemListArrayList.remove(i);
+                            }
+                        }
+                        myAdapter.notifyDataSetChanged();
+
+                        mode.finish();
+                }
+                return true;
+            }
+
+            @Override
+            public void onDestroyActionMode(ActionMode mode) {
+
             }
         });
     }

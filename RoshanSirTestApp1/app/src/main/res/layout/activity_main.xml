@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+
     <LinearLayout
         android:id="@+id/linearLayout"
         style="@style/TextAppearance.AppCompat.Medium.Inverse"
@@ -18,6 +20,12 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </android.support.v7.widget.Toolbar>
 
         <EditText
             android:id="@+id/nameEditText"
@@ -66,10 +74,10 @@
     <ListView
         android:id="@+id/nameList"
         android:layout_width="0dp"
-        android:layout_height="478dp"
-        android:layout_marginTop="216dp"
+        android:layout_height="434dp"
+        android:layout_marginTop="272dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/linearLayout" />
 
