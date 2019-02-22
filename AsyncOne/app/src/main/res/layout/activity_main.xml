@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:weightSum="100"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/timeToSleepTextView"

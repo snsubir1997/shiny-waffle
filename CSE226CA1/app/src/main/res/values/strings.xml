@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">CSE226CA1</string>
+
+    <string-array name="names">
+        <item>Terry	Fitzgerald</item>
+        <item>Rufus	Klein</item>
+        <item>Edith	Haynes</item>
+        <item>Belinda Francis</item>
+        <item>Everett Frank</item>
+        <item>Keith	Scott</item>
+    </string-array>
+
+    <string-array name="image">
+        <item>R.drawable.ic_launcher_background</item>
+        <item>R.drawable.ic_launcher_background</item>
+        <item>R.drawable.ic_launcher_background</item>
+        <item>R.drawable.ic_launcher_background</item>
+        <item>R.drawable.ic_launcher_background</item>
+        <item>R.drawable.ic_launcher_background</item>
+    </string-array>
+</resources>
