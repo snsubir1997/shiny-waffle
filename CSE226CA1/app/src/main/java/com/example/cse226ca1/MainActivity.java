@@ -18,6 +18,16 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private MyAdapter mAdapter;
 
+    int itemImage[] = {
+            R.drawable.ic_android_black_24dp,
+            R.drawable.ic_android_black_24dp,
+            R.drawable.ic_android_black_24dp,
+            R.drawable.ic_android_black_24dp,
+            R.drawable.ic_android_black_24dp,
+            R.drawable.ic_android_black_24dp};
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
     public void prepareData()
     {
         String itemName[] = getResources().getStringArray(R.array.names);
-        int itemImage[] = getResources().getIntArray(R.array.image);
 
         for (int i = 0; i < itemName.length; i++) {
             itemLists.add(new ItemList(itemName[i], itemImage[i]));

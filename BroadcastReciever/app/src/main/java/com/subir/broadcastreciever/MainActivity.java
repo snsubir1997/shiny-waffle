@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void startAlert() {
 
-        int i = Integer.parseInt(e1.getText().toString());
         Intent intent = new Intent(this,MyReceiver.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(this.getApplicationContext(),
                 REQ_CODE,intent,0);

@@ -9,13 +9,4 @@
         <item>Everett Frank</item>
         <item>Keith	Scott</item>
     </string-array>
-
-    <string-array name="image">
-        <item>R.drawable.ic_launcher_background</item>
-        <item>R.drawable.ic_launcher_background</item>
-        <item>R.drawable.ic_launcher_background</item>
-        <item>R.drawable.ic_launcher_background</item>
-        <item>R.drawable.ic_launcher_background</item>
-        <item>R.drawable.ic_launcher_background</item>
-    </string-array>
 </resources>
