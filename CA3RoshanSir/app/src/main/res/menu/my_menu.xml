@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/imageOne"
+        android:title="ImageOne" />
+
+    <item android:id = "@+id/imageTwo"
+        android:title="ImageTwo" />
+
+    <item android:id="@+id/imageThree"
+        android:title="ImageThree" />
+
+    <item android:id="@+id/imageFour"
+        android:title="ImageFour" />
+
+</menu>

@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             s = s + " Name is " + s1 + " Pass is " + a + "\n";
         }
         Toast.makeText(MainActivity.this, s, Toast.LENGTH_SHORT).show();
+
     }
 
     @Override
