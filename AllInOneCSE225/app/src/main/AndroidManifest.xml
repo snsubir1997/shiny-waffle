@@ -23,7 +23,7 @@
         </activity>
         <activity android:name=".UnitOne"/>
         <activity android:name=".UnitTwo"/>
-        <activity android:name=".UnitThree"/>
+        <activity android:name=".UnitThree" />
         <activity android:name=".UnitFour"/>
         <activity android:name=".UnitFive"/>
         <activity android:name=".UnitSix"/>
