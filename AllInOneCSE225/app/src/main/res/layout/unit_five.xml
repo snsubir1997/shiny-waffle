@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/someDatatosave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/savetosharedPref"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save To Shared Pref"/>
+        <Button
+            android:id="@+id/retrievefromsharedPref"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Retrieve From Shared Pref"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+        <Button
+            android:id="@+id/savetoInternal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save To Internal"/>
+        <Button
+            android:id="@+id/retrievefromInternal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Retrieve From Internal"/>
+        <Button
+            android:id="@+id/savetoExternal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save To External"/>
+        <Button
+            android:id="@+id/retrievefromExternal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Retrieve From External"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
